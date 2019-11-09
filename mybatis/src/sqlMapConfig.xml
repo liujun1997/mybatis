@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration  
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--1.3配置连接池需要的参数-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="数据库URL"/>
+                <property name="username" value="数据库USER"/>
+                <property name="password" value="PASSWORD"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="live/liujun/dao/UserMapper.xml"/>
+    </mappers>
+</configuration>
